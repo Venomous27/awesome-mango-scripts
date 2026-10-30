@@ -1,14 +1,31 @@
-# A Simple bash script for enabling/disabling monitor for multi-monitor setups
+# A simple bash script for enabling/disabling monitors in multi-monitor setups
 
-In the `monitor.sh` change the monitor names according to your monitor's name.<br>
-Use `wlr-randr` to get your monitor's name, make, model, and serial.<br>
-You can also add more options according to your need.<br>
+In `monitor.sh`, change the monitor names to match your monitors.
 
-To use it with MangoWM<br>
-Add keybind and windowrule in your `mango's config`. Don't forget to change path of script in keybind :p<br>
+Use `wlr-randr` to get your monitor's name, make, model, and serial.
 
-Keybind:<br>
-`bind=SUPER,p,spawn_shell,kitty --title="Floating-Monitor" -e ~/superior-dotfiles-mango/scripts/monitor.sh`
+You can also add more options according to your needs.
 
-Windowrule:<br>
-`windowrule=title:Floating-Monitor,width:300,height:200,isfloating:1`
+## Setup
+
+Make the script executable:
+
+```bash
+chmod +x ~/superior-dotfiles-mango/scripts/monitor.sh
+```
+
+## Usage with MangoWM
+
+Add a keybind and a window rule to your Mango config. Don't forget to change the path of the script in the keybind :p
+
+**Keybind:**
+
+```
+bind=SUPER,p,spawn_shell,kitty --title="Floating-Monitor" -e ~/superior-dotfiles-mango/scripts/monitor.sh
+```
+
+**Window rule:**
+
+```
+windowrule=title:Floating-Monitor,width:300,height:200,isfloating:1
+```
